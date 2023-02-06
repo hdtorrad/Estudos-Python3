@@ -5,6 +5,6 @@ print('=============\n🎼TOCA MÚSICA🎼\n=============')
 
 pygame.mixer.init()
 pygame.init()
-pygame.mixer.music.load('ex021m.mp3')
+pygame.mixer.music.load('D:\\aa\Estudos-Python3\Só exercícios\ex021m.mp3')
 pygame.mixer.music.play()
 pygame.event.wait()

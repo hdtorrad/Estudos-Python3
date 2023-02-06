@@ -3,27 +3,27 @@ Faça um programa que pergunte a hora ao usuário e, baseando-se no horário
 descrito, exiba a saudação apropriada. Ex.
 Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 """
-print('\033[1:35m-=-'*8, ' CONVERSOR DE RELÓGIOS', '\033[1:35m-=-\033[m'*8, sep = '\n')
-tm = input('\nDigite o horário no relógio militar: ')
+print('-=-' * 8, ' CONVERSOR DE RELÓGIOS', '-=-' *8, sep = '\n')
+
+horario= input('\nDigite o horário no relógio militar: ')
 
 try:
-    tm = int(tm)
-    ta = tm - 12
-    ta = int(ta)
+    horario = int(horario)
+    horario_americano = horario - 12 # Não existe horas negativas, por isso esta variavel não é usada em todas as opções
 
-    if tm < 24:
-        if ta <= 0:
-            if tm < 12:
-                print(f'\n\n\033[1:33mBom dia!☀\033[m\nHorário convertido:', f'0{tm}:00am' if tm < 10 else f'{tm}:00am')
-            else:
-                print(f'\n\n\033[1:33mBoa Tarde!☀\033[m\nHorário convertido: 00:00pm')
-        else:
-            if tm <= 17:
-                print(f'\n\n\033[1:33mBoa Tarde!☀\033[m\nHorário convertido: {ta}:00pm')
-            else:
-                print(f'\n\n\033[1:33mBoa Noite!🌑\033[m\nHorário convertido: {ta}:00pm')
+    if horario <= 24 and horario > 0:
+
+        if horario >=0 and horario <= 11:
+            print(f'\nBom dia!☀\033[m\nHorário convertido:', f'0{horario}:00am') 
+        
+        elif horario >= 12 and horario <= 17:
+            print(f'\nBoa Tarde!☀\033[m\nHorário convertido: {horario_americano}:00pm')
+        
+        elif horario >= 18 and horario <= 24:
+            print(f'\nBoa Noite!🌑\033[m\nHorário convertido: {horario_americano}:00pm')
+    
     else:
-        print('\n\n\033[1:31m24 no relógio mundial é igual a 00' if tm ==24 else '\033[1:31mO dia só tem 24h!!')
+        print('\nO dia só tem 24h e não existe hora negativa!!')
 
 except:
-    print('\033[1:31mERROR - DIGITE SOMENTE NÚMEROS!!')
+    print('ERROR - DIGITE SOMENTE NÚMEROS!!')

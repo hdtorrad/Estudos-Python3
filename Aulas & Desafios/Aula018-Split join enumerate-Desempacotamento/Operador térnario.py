@@ -1,5 +1,6 @@
 """
-SImplificar if e else
+Simplificar if e else
+<valor> if <condicao> else <outro valor>
 """
 
 a = True
