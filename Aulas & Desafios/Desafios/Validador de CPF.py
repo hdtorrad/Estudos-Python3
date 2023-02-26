@@ -21,7 +21,7 @@ cpf = input('\033[1mDigite o CPF a ser analisado APENAS NÚMEROS S/ESPAÇOS: ').
 ssd, spd = 0, 0
 cg = 11
 if cpf.isnumeric():
-    for i in cpf[:10]:
+    for  i in cpf[:10]:
         i = int(i)
         if cg != 2:
             ssd += (i * cg) if not cg == 11 else (11 * i)

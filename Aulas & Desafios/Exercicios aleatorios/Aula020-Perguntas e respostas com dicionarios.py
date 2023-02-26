@@ -25,8 +25,12 @@ dic = {
 
 for key, valor in dic.items():
     print(f'{key}:\n{valor["pergunta"]}\n\nAlternativas:')
+    
     for alternativa, resp in valor["respostas"].items():
         print(f'[{alternativa}] - {resp}')
+        
     print()
+    
     resposta_usuario = input('Digite a opção certa:\n')
+    
     print('CORRETO!!!' if resposta_usuario == valor['respc'] else 'Errou')

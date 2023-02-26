@@ -28,7 +28,7 @@ x = 1
 
 
 def escopo():
-    global x
+    
     x = 10
 
     def outra_funcao():
@@ -44,3 +44,14 @@ def escopo():
 print(x)
 escopo()
 print(x)
+
+
+#Teste de variaveis
+
+a=2
+b=a
+print(a,b)
+b=3
+print(a,b)
+a=4
+print(a,b)
